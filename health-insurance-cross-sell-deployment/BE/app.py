@@ -58,7 +58,6 @@ class CustomerFeatures(BaseModel):
 
 
 # --- 4. API ENDPOINTS ---
-# Root endpoint
 @app.get("/")
 def read_root():
     """
@@ -66,7 +65,6 @@ def read_root():
     """
     return {"status": "online", "message": "Health Insurance Prediction API is running!"}
 
-# Prediction endpoint
 @app.post("/predict/")
 def predict_interest(features: CustomerFeatures):
     
